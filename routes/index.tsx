@@ -1,6 +1,7 @@
 import Head from "../components/Head.tsx";
 import Sidebar from "../components/Sidebar.tsx";
 import Title from "../islands/title.tsx";
+import Deployment from "../components/Deployment.tsx";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
       <Head>
         <title>My title is Mr. 🥸</title>
       </Head>
-      <main class="container-fluid ps-0">
-        <div class="row">
+      <main class="container ms-0 ps-0">
+        <div class="row h-100">
           <div class="col-3">
             <Sidebar />
           </div>
@@ -19,6 +20,7 @@ export default function Home() {
               <h3>My name is John Carveth, a <Title/></h3>
               <p class="py-4">I am from <mark class="bg-success bg-opacity-25">Toronto, ON</mark> and have been writing code for over 10 years.</p>
               <hr/>
+              <Deployment />
             </div>
           </div>
         </div>
