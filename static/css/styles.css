@@ -2,3 +2,26 @@
   height: 100vh;
 }
 
+#sidebar .sidebar-header h3 {
+  display: block;
+}
+
+#sidebar .sidebar-header strong {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 80px;
+    max-width: 80px;
+  }
+
+  #sidebar .sidebar-header h3 {
+    display: none;
+  }
+
+  #sidebar .sidebar-header strong {
+    display: block;
+    font-size: small;
+  }
+}
