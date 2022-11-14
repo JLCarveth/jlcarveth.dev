@@ -9,12 +9,12 @@ export default function Home() {
       <Head>
         <title>My title is Mr. 🥸</title>
       </Head>
-      <main class="container ms-0 ps-0">
+      <main class="container-fluid ms-0 ps-0">
         <div class="row h-100">
-          <div class="col-3">
+          <div class="col-2 col-sm-3">
             <Sidebar />
           </div>
-          <div class="col">
+          <div class="col-10 col-sm-9">
             <div class="px-4 py-4 my-5 text-center">
               <h1 class="display-5 fw-bold">Welcome to my website!</h1>
               <h3>My name is John Carveth, a <Title/></h3>

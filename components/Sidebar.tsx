@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div id="sidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width=280px">
+    <div id="sidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
       <div class="sidebar-header">
         <h3>JLCarveth.dev</h3>
         <strong>JLC.DEV</strong>
