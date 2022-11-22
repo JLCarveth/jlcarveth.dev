@@ -10,7 +10,7 @@ export default function Home() {
         <title>My title is Mr. 🥸</title>
       </Head>
       <main class="container-fluid ms-0 ps-0">
-        <div class="row h-100">
+        <div class="row">
           <div class="col-2 col-sm-3">
             <Sidebar />
           </div>
