@@ -14,7 +14,7 @@ export default function Home() {
           <div class="col-2 col-sm-3">
             <Sidebar />
           </div>
-          <div class="col-10 col-sm-9">
+          <div class="col col-sm">
             <div class="px-4 py-4 my-5 text-center">
               <h1 class="display-5 fw-bold">Welcome to my website!</h1>
               <h3>My name is John Carveth, a <Title/></h3>
