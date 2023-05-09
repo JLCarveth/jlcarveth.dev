@@ -11,10 +11,10 @@ export default function Home() {
       </Head>
       <main class="container-fluid ms-0 ps-0">
         <div class="row">
-          <div class="col-2 col-sm-3">
+          <div class="col-2">
             <Sidebar />
           </div>
-          <div class="col col-sm">
+          <div class="col">
             <div class="px-4 py-4 my-5 text-center">
               <h1 class="display-5 fw-bold">Welcome to my website!</h1>
               <h3>My name is John Carveth, a <Title/></h3>
