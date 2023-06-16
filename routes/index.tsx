@@ -1,4 +1,5 @@
 import Head from "../components/Head.tsx";
+import Navbar from "../components/Navbar.tsx";
 import Sidebar from "../components/Sidebar.tsx";
 import Title from "../islands/title.tsx";
 import Deployment from "../components/Deployment.tsx";
@@ -9,11 +10,10 @@ export default function Home() {
       <Head>
         <title>My title is Mr. 🥸</title>
       </Head>
+      <Navbar/>
+      <div class="overlay">
       <main class="container-fluid ms-0 ps-0">
         <div class="row">
-          <div class="col-2">
-            <Sidebar />
-          </div>
           <div class="col">
             <div class="px-4 py-4 my-5 text-center">
               <h1 class="display-5 fw-bold">Welcome to my website!</h1>
@@ -25,6 +25,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      </div>
     </>
   );
 }

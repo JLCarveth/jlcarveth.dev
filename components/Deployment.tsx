@@ -3,7 +3,7 @@ export default function Deployment() {
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col col-sm col-lg-6">
         <img
-          class="d-block mx-lg-auto img-fluid"
+          class="d-block mx-auto img-fluid"
           src="/img/deployment.webp"
           height="500"
           width="700"

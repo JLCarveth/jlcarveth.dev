@@ -1,7 +1,19 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("/img/bg.webp");
 }
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav { z-index: 2; }
 
 html {
   height: -webkit-fill-available;
@@ -14,33 +26,4 @@ main {
   min-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
-}
-
-#sidebar {
-  height: 100%;
-}
-
-#sidebar .sidebar-header h3 {
-  display: block;
-  font-size: medium;
-}
-
-#sidebar .sidebar-header strong {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  #sidebar {
-    min-width: 80px;
-    max-width: 80px;
-  }
-
-  #sidebar .sidebar-header h3 {
-    display: none;
-  }
-
-  #sidebar .sidebar-header strong {
-    display: block;
-    font-size: small;
-  }
 }
