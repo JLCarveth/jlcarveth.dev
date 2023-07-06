@@ -6,7 +6,7 @@ export const handler = async (
 ): Promise<Response> => {
   const addr = _ctx.remoteAddr as Deno.NetAddr;
 
-  return await fetch("https://stats.jlcarveth.dev/a/event", {
+  return await fetch("https://stats.jlcarveth.dev/api/event", {
     method: "post",
     headers: {
       "User-Agent": _req.headers.get("User-Agent") ?? "None",
