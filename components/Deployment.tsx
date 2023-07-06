@@ -1,6 +1,6 @@
 export default function Deployment() {
   return (
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="row flex-lg-row-reverse align-items-center text-center g-5 py-5">
       <div class="col col-sm col-lg-6">
         <img
           class="d-block mx-auto img-fluid"
