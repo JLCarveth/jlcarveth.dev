@@ -9,6 +9,11 @@ export default function Home() {
     <>
       <Head>
         <title>My title is Mr. 🥸</title>
+        <script
+          defer
+          src="/js/script.js"
+          data-domain="jlcarveth.dev"
+        ></script>
       </Head>
       <Navbar/>
       <div class="overlay">
