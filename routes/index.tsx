@@ -1,7 +1,5 @@
 import Head from "../components/Head.tsx";
 import Navbar from "../components/Navbar.tsx";
-import Sidebar from "../components/Sidebar.tsx";
-import Title from "../islands/title.tsx";
 import Deployment from "../components/Deployment.tsx";
 import Services from "../components/Services.tsx";
 import Welcome from "../components/Welcome.tsx";
