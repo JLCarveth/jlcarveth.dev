@@ -1,6 +1,7 @@
 export default function Contact() {
   return (
     <div class="contact">
+    <h3>Reach Out</h3>
       <form action="https://api.jlcarveth.dev/contact" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
