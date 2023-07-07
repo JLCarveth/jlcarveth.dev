@@ -1,3 +1,2 @@
-static/js/*
-static/css/bootstrap*
-static/img/*
+.vim/
+.env*
