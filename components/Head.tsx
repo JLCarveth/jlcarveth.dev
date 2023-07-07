@@ -12,6 +12,12 @@ export default function Head() {
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
       />
       <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap"
+        rel="stylesheet"
+      />
       <script defer src="/js/script.js" data-domain="jlcarveth.dev" />
     </IHead>
   );
