@@ -13,6 +13,12 @@ export default function Head() {
         async defer
       />
       <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap"
+        rel="stylesheet"
+      />
       <script defer src="/js/script.js" data-domain="jlcarveth.dev" />
     </IHead>
   );
