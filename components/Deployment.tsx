@@ -7,7 +7,6 @@ export default function Deployment() {
           src="/img/deployment.webp"
           height="500"
           width="700"
-          loading="lazy"
         />
       </div>
       <div class="col-lg-6">
