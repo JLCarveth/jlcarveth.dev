@@ -7,6 +7,7 @@ export default function Deployment() {
           src="/img/deployment.webp"
           height="500"
           width="700"
+          alt="A computer terminal showing output of Systemd"
         />
       </div>
       <div class="col-lg-6">

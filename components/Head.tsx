@@ -6,6 +6,7 @@ export default function Head() {
       <title>John Carveth</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Web Design and Hosting, E-Commerce, Cloud Storage"/>
       <link rel="stylesheet" async defer href="/css/bootstrap.min.css" />
       <link
         rel="stylesheet"
