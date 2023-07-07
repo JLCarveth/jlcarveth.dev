@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.tsx";
 import Deployment from "../components/Deployment.tsx";
 import Services from "../components/Services.tsx";
 import Welcome from "../components/Welcome.tsx";
+import Contact from "../components/Contact.tsx";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
             <Deployment />
             <hr />
             <Services />
+            <hr />
+            <Contact />
           </div>
         </main>
       </div>
