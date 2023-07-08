@@ -4,6 +4,7 @@ import Deployment from "../components/Deployment.tsx";
 import Services from "../components/Services.tsx";
 import Welcome from "../components/Welcome.tsx";
 import Contact from "../components/Contact.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
             <Services />
             <hr />
             <Contact />
+            <hr />
+            <Footer />
           </div>
         </main>
       </div>
