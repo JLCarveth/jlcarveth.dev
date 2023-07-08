@@ -34,6 +34,12 @@ h1, h2, h3, h4, h5 {
   margin: auto;
 }
 
+footer {
+  text-align: center;
+  text-shadow: 1px 1px #aaa;
+  padding-top: 2rem;
+}
+
 html {
   height: -webkit-fill-available;
 }
