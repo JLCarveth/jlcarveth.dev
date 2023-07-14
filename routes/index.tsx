@@ -5,6 +5,7 @@ import Services from "../components/Services.tsx";
 import Welcome from "../components/Welcome.tsx";
 import Contact from "../components/Contact.tsx";
 import Footer from "../components/Footer.tsx";
+import Alert from "../islands/alert.tsx";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <div class="overlay">
+        <Alert />
         <main class="container-fluid ms-0 ps-0">
           <div class="px-4 py-4 my-5">
             <Welcome />
