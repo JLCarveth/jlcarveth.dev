@@ -10,9 +10,7 @@ import Alert from "../islands/alert.tsx";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>My title is Mr. 🥸</title>
-      </Head>
+      <Head />
       <Navbar />
       <div class="overlay">
         <Alert />
