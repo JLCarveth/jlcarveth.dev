@@ -1,10 +1,11 @@
-import { useState } from "preact/hooks";
 import { Service } from "../components/Services.tsx";
 
 export default function Service({ title, description, img }: Service) {
+
   return (
+  <>
     <div
-      class="col"
+      class="col-md-6"
     >
       <div class="card mb-3">
         <div class="row g-0">
@@ -14,7 +15,6 @@ export default function Service({ title, description, img }: Service) {
               className="img-fluid rounded-start"
               alt={title}
             />
-            <a className="stretched-link" onClick={() => console.log("Click " + description)}/>
           </div>
           <div class="col-md-8">
             <div className="card-body">
@@ -25,5 +25,6 @@ export default function Service({ title, description, img }: Service) {
         </div>
       </div>
     </div>
+    </>
   );
 }
