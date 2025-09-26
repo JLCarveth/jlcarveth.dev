@@ -442,6 +442,7 @@ body {
     var(--gray-100) 50%,
     var(--slate-100) 100%
   );
+  background: #b85d6f;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -467,6 +468,7 @@ body {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--br-gray);
+  color: white;
   margin: 0 0 1rem 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -476,6 +478,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--br-gray-650);
+  color: white;
   margin: 0 0 3rem 0;
   font-weight: 400;
 }
