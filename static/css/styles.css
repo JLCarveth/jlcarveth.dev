@@ -1,54 +1,253 @@
+:root {
+  color-scheme: light dark;
+  --base-spacing: 4px;
+
+  /* Brand colours */
+  --br-yellow: #FFEE93;
+  --br-gray: #4C5B61;
+  --br-red: #F4442E;
+  --br-blue: #56EEF4;
+  --br-violet: #C98BB9;
+
+  /* Yellow shades */
+  --br-yellow-50: #fffbe5;
+  --br-yellow-150: #fff3b2;
+  --br-yellow-250: #ffeb80;
+  --br-yellow-350: #ffe34c;
+  --br-yellow-450: #ffdb19;
+  --br-yellow-550: #e5c100;
+  --br-yellow-650: #b29600;
+  --br-yellow-750: #7f6b00;
+  --br-yellow-850: #4c4000;
+  --br-yellow-950: #191500;
+
+  /* Gray shades */
+  --br-gray-50: #f1f3f4;
+  --br-gray-150: #d4dbdd;
+  --br-gray-250: #b8c3c7;
+  --br-gray-350: #9baab1;
+  --br-gray-450: #7e929a;
+  --br-gray-550: #657981;
+  --br-gray-650: #4e5e64;
+  --br-gray-750: #384347;
+  --br-gray-850: #22282b;
+  --br-gray-950: #0b0d0e;
+
+  /* Red shades */
+  --br-red-50: #fee9e7;
+  --br-red-150: #fbbeb6;
+  --br-red-250: #f99386;
+  --br-red-350: #f66755;
+  --br-red-450: #f43c25;
+  --br-red-550: #da220b;
+  --br-red-650: #aa1b09;
+  --br-red-750: #791306;
+  --br-red-850: #490b04;
+  --br-red-950: #180401;
+
+  /* Blue shades */
+  --br-blue-50: #e7fdfd;
+  --br-blue-150: #b7f8fa;
+  --br-blue-250: #87f3f7;
+  --br-blue-350: #57eef4;
+  --br-blue-450: #28e9f1;
+  --br-blue-550: #0ed0d7;
+  --br-blue-650: #0ba2a8;
+  --br-blue-750: #087378;
+  --br-blue-850: #054548;
+  --br-blue-950: #021718;
+
+  /* Violet shades */
+  --br-violet-50: #f7eef4;
+  --br-violet-150: #e7cbe0;
+  --br-violet-250: #d7a8cb;
+  --br-violet-350: #c685b5;
+  --br-violet-450: #b662a0;
+  --br-violet-550: #9d4987;
+  --br-violet-650: #7a3969;
+  --br-violet-750: #57284b;
+  --br-violet-850: #34182d;
+  --br-violet-950: #11080f;
+
+  /* Slate Colors */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Gray Colors */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #030712;
+
+  /* Zinc Colors */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+
+  /* Neutral Colors */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  /* Red Colors */
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+
+  /* Orange Colors */
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --orange-900: #7c2d12;
+  --orange-950: #431407;
+
+  /* Amber Colors */
+  --amber-50: #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-200: #fde68a;
+  --amber-300: #fcd34d;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+  --amber-800: #92400e;
+  --amber-900: #78350f;
+  --amber-950: #451a03;
+
+  /* Yellow Colors */
+  --yellow-50: #fefce8;
+  --yellow-100: #fef9c3;
+  --yellow-200: #fef08a;
+  --yellow-300: #fde047;
+  --yellow-400: #facc15;
+  --yellow-500: #eab308;
+  --yellow-600: #ca8a04;
+  --yellow-700: #a16207;
+  --yellow-800: #854d0e;
+  --yellow-900: #713f12;
+  --yellow-950: #422006;
+
+  /* Lime Colors */
+  --lime-50: #f7fee7;
+  --lime-100: #ecfccb;
+  --lime-200: #d9f99d;
+  --lime-300: #bef264;
+  --lime-400: #a3e635;
+  --lime-500: #84cc16;
+  --lime-600: #65a30d;
+  --lime-700: #4d7c0f;
+  --lime-800: #3f6212;
+  --lime-900: #365314;
+  --lime-950: #1a2e05;
+
+  /* Green Colors */
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #15803d;
+  --green-800: #166534;
+  --green-900: #14532d;
+  --green-950: #052e16;
+
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+}
+
+html,
 body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  position: relative;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url("/img/bg.webp");
-  overscroll-behavior-y: none;
-  font-family: 'DM Sans', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'DM Serif Display', serif;
-}
-
-.overlay {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.nav { z-index: 2; }
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card {
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact {
-  max-width: 500px;
-  margin: auto;
-}
-
-footer {
-  text-align: center;
-  text-shadow: 1px 1px #aaa;
-  padding-top: 2rem;
-}
-
-html {
-  height: -webkit-fill-available;
-}
-
-main {
   display: flex;
-  flex-wrap: nowrap;
-  height: auto;
-  min-height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  flex-direction: column;
 }
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.waves {
+  width: 100%;
+  overflow: hidden;
+  flex-grow: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.waves svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+

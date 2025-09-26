@@ -8,6 +8,8 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $index from "./routes/index.tsx";
 import * as $js_script_js from "./routes/js/script.js.ts";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $ScrollAnimations from "./islands/ScrollAnimations.tsx";
+import * as $Skills from "./islands/Skills.tsx";
 import * as $alert from "./islands/alert.tsx";
 import * as $title from "./islands/title.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -22,6 +24,8 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/ScrollAnimations.tsx": $ScrollAnimations,
+    "./islands/Skills.tsx": $Skills,
     "./islands/alert.tsx": $alert,
     "./islands/title.tsx": $title,
   },
