@@ -7,6 +7,7 @@ import * as $api_event from "./routes/api/event.ts";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $index from "./routes/index.tsx";
 import * as $js_script_js from "./routes/js/script.js.ts";
+import * as $projects_slug_ from "./routes/projects/[slug].tsx";
 import * as $Skills from "./islands/Skills.tsx";
 import * as $title from "./islands/title.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -18,6 +19,7 @@ const manifest = {
     "./routes/api/joke.ts": $api_joke,
     "./routes/index.tsx": $index,
     "./routes/js/script.js.ts": $js_script_js,
+    "./routes/projects/[slug].tsx": $projects_slug_,
   },
   islands: {
     "./islands/Skills.tsx": $Skills,

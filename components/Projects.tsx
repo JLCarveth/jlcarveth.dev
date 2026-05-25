@@ -1,33 +1,4 @@
-const projects = [
-  {
-    name: "Pastebin",
-    url: "https://paste.jlcarveth.dev",
-    description:
-      "A self-hosted paste service for sharing code snippets and text. Minimal, fast, and accessible without an account.",
-    tags: ["Deno", "TypeScript", "PostgreSQL"],
-  },
-  {
-    name: "Notes",
-    url: "https://notes.jlcarveth.dev",
-    description:
-      "Personal markdown-based notes application. Lightweight and private — built for quick capture and retrieval.",
-    tags: ["Deno", "Fresh", "Preact"],
-  },
-  {
-    name: "jlcarveth.dev",
-    url: "https://jlcarveth.dev",
-    description:
-      "This portfolio site. Built with Deno and Fresh for server-side rendering and minimal client-side overhead.",
-    tags: ["Deno", "Fresh", "Preact", "TypeScript"],
-  },
-  {
-    name: "Blog",
-    url: "https://blog.jlcarveth.dev",
-    description:
-      "Technical writing on software development, systems programming, and engineering decisions across the stack.",
-    tags: ["Technical Writing"],
-  },
-];
+import { projects } from "../lib/projects.ts";
 
 export default function Projects() {
   return (
@@ -47,10 +18,15 @@ export default function Projects() {
               </a>
             </div>
             <p className="project-description">{p.description}</p>
-            <div className="project-tags">
-              {p.tags.map((tag, j) => (
-                <span className="project-tag" key={j}>{tag}</span>
-              ))}
+            <div className="project-card-footer">
+              <div className="project-tags">
+                {p.tags.map((tag, j) => (
+                  <span className="project-tag" key={j}>{tag}</span>
+                ))}
+              </div>
+              <a href={`/projects/${p.slug}`} className="project-details-link">
+                Details →
+              </a>
             </div>
           </div>
         ))}
