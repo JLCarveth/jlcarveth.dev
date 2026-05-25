@@ -1,62 +1,30 @@
 import { h } from 'preact';
 
-export default function Skills() {
-  const skills = [
-    {
-      name: 'JavaScript/TypeScript',
-      icon: '🟨',
-      description: 'Node.js & Deno',
-      color: 'var(--amber-400)'
-    },
-    {
-      name: 'Preact/React',
-      icon: '⚛️',
-      description: 'Frontend frameworks',
-      color: 'var(--blue-400)'
-    },
-    {
-      name: 'PostgreSQL',
-      icon: '🐘',
-      description: 'Database design',
-      color: 'var(--blue-600)'
-    },
-    {
-      name: 'Linux',
-      icon: '🐧',
-      description: 'Debian packaging & systemd',
-      color: 'var(--slate-700)'
-    },
-    {
-      name: 'C/Rust',
-      icon: '⚙️',
-      description: 'Systems programming',
-      color: 'var(--orange-600)'
-    },
-    {
-      name: 'Embedded',
-      icon: '🔧',
-      description: 'ESP32 & Arduino',
-      color: 'var(--green-600)'
-    },
-  ];
+const skills = [
+  { name: 'JavaScript / TypeScript', icon: '⬡', description: 'Node.js & Deno runtimes' },
+  { name: 'Preact / React',          icon: '◎', description: 'Frontend frameworks' },
+  { name: 'PostgreSQL',              icon: '🐘', description: 'Database design & optimization' },
+  { name: 'Linux',                   icon: '◈', description: 'Debian packaging & systemd' },
+  { name: 'C / Rust',               icon: '⚙', description: 'Systems programming' },
+  { name: 'Embedded',               icon: '◻', description: 'ESP32 & Arduino platforms' },
+];
 
+export default function Skills() {
   return (
     <section class="skills-section">
-      <div class="skills-container">
-        <h2 class="skills-title">Skills & Technologies</h2>
-        <p class="skills-subtitle">Technologies I work with regularly</p>
-
-        <div class="skills-grid">
-          {skills.map((skill, index) => (
-            <div class="skill-card" key={index}>
-              <div class="skill-icon" style={{ color: skill.color }}>
-                {skill.icon}
-              </div>
-              <h3 class="skill-name">{skill.name}</h3>
-              <p class="skill-description">{skill.description}</p>
-            </div>
-          ))}
-        </div>
+      <div class="skills-header">
+        <span class="section-label">// expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">Technologies I work with regularly</p>
+      </div>
+      <div class="skills-grid">
+        {skills.map((skill, i) => (
+          <div class="skill-card" key={i}>
+            <span class="skill-icon">{skill.icon}</span>
+            <h3 class="skill-name">{skill.name}</h3>
+            <p class="skill-description">{skill.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
