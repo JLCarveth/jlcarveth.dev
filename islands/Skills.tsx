@@ -1,12 +1,12 @@
 import { h } from 'preact';
 
 const skills = [
-  { name: 'JavaScript / TypeScript', icon: '⬡', description: 'Node.js & Deno runtimes' },
-  { name: 'Preact / React',          icon: '◎', description: 'Frontend frameworks' },
-  { name: 'PostgreSQL',              icon: '🐘', description: 'Database design & optimization' },
-  { name: 'Linux',                   icon: '◈', description: 'Debian packaging & systemd' },
-  { name: 'C / Rust',               icon: '⚙', description: 'Systems programming' },
-  { name: 'Embedded',               icon: '◻', description: 'ESP32 & Arduino platforms' },
+  { name: 'JavaScript / TypeScript', icon: 'devicon-typescript-plain', description: 'Node.js & Deno runtimes' },
+  { name: 'Preact / React',          icon: 'devicon-react-original',   description: 'Frontend frameworks' },
+  { name: 'PostgreSQL',              icon: 'devicon-postgresql-plain',  description: 'Database design & optimization' },
+  { name: 'Linux',                   icon: 'devicon-linux-plain',       description: 'Debian packaging & systemd' },
+  { name: 'C / Rust',               icon: 'devicon-rust-plain',        description: 'Systems programming' },
+  { name: 'Embedded',               icon: 'devicon-arduino-plain',     description: 'ESP32 & Arduino platforms' },
 ];
 
 export default function Skills() {
@@ -20,7 +20,7 @@ export default function Skills() {
       <div class="skills-grid">
         {skills.map((skill, i) => (
           <div class="skill-card" key={i}>
-            <span class="skill-icon">{skill.icon}</span>
+            <i class={`skill-icon ${skill.icon}`}></i>
             <h3 class="skill-name">{skill.name}</h3>
             <p class="skill-description">{skill.description}</p>
           </div>

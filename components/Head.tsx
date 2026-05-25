@@ -9,6 +9,7 @@ export default function Head() {
       <meta name="color-scheme" content="light dark" />
       <meta name="description" content="Software developer & IT specialist based in Toronto, Ontario. Full-stack, systems programming, and embedded development." />
       <link rel="stylesheet" href="/css/styles.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       <script defer src="/js/script.js" data-domain="jlcarveth.dev" />
     </IHead>
   );
