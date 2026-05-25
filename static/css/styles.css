@@ -4,25 +4,51 @@
 :root {
   color-scheme: light dark;
 
-  --accent:        light-dark(#8B6500, #FFD700);
-  --accent-bright: #FFD700;
-  --accent-faint:  light-dark(rgba(139, 101, 0, 0.10), rgba(255, 215, 0, 0.07));
-  --accent-dim:    light-dark(rgba(139, 101, 0, 0.35), rgba(255, 215, 0, 0.35));
+  /* --- Palette primitives --- */
+  --gold-dark:  #FFD900;
+  --gold:       #FFD700;
+  --gold-light: #ffe54a;
 
-  --bg-0:   light-dark(#fafafa,  #090909);
-  --bg-1:   light-dark(#f2f2ec,  #0e0e0e);
-  --bg-2:   light-dark(#e8e8e2,  #151515);
-  --bg-3:   light-dark(#deded8,  #1d1d1d);
+  --light-0: #fafafa;  --dark-0: #090909;
+  --light-1: #f2f2ec;  --dark-1: #0e0e0e;
+  --light-2: #e8e8e2;  --dark-2: #151515;
+  --light-3: #deded8;  --dark-3: #1d1d1d;
 
-  --text-0: light-dark(#0a0a0a,  #f0f0ea);
-  --text-1: light-dark(#5a5a56,  #8a8a84);
-  --text-2: light-dark(#9a9a96,  #4a4a46);
+  --light-ink-0: #0a0a0a;  --dark-ink-0: #f0f0ea;
+  --light-ink-1: #5a5a56;  --dark-ink-1: #8a8a84;
+  --light-ink-2: #9a9a96;  --dark-ink-2: #4a4a46;
 
-  --border:        light-dark(#d4d4ce, #1e1e1e);
-  --border-subtle: light-dark(#e2e2dc, #161616);
+  --light-rule:        #d4d4ce;  --dark-rule:        #1e1e1e;
+  --light-rule-subtle: #e2e2dc;  --dark-rule-subtle: #161616;
 
-  --dot-color:  light-dark(rgba(0, 0, 0, 0.06),       rgba(255, 255, 255, 0.055));
-  --glow-color: light-dark(rgba(139, 101, 0, 0.08),   rgba(255, 215, 0, 0.055));
+  /* --- Semantic tokens --- */
+  --accent:        light-dark(var(--gold-dark), var(--gold));
+  --accent-bright: var(--gold);
+  --accent-faint:  light-dark(color-mix(in srgb, var(--gold-dark) 10%, transparent),
+                              color-mix(in srgb, var(--gold) 7%, transparent));
+  --accent-dim:    light-dark(color-mix(in srgb, var(--gold-dark) 35%, transparent),
+                              color-mix(in srgb, var(--gold) 35%, transparent));
+
+  --bg-0:   light-dark(var(--light-0), var(--dark-0));
+  --bg-1:   light-dark(var(--light-1), var(--dark-1));
+  --bg-2:   light-dark(var(--light-2), var(--dark-2));
+  --bg-3:   light-dark(var(--light-3), var(--dark-3));
+
+  --text-0: light-dark(var(--light-ink-0), var(--dark-ink-0));
+  --text-1: light-dark(var(--light-ink-1), var(--dark-ink-1));
+  --text-2: light-dark(var(--light-ink-2), var(--dark-ink-2));
+
+  --border:        light-dark(var(--light-rule),        var(--dark-rule));
+  --border-subtle: light-dark(var(--light-rule-subtle), var(--dark-rule-subtle));
+
+  --dot-color:  light-dark(color-mix(in srgb, #000 6%,              transparent),
+                           color-mix(in srgb, #fff 5.5%,            transparent));
+  --glow-color: light-dark(color-mix(in srgb, var(--gold-dark) 8%,  transparent),
+                           color-mix(in srgb, var(--gold) 5.5%,     transparent));
+
+  --on-accent:     #000;
+  --accent-hover:  var(--gold-light);
+  --accent-shadow: color-mix(in srgb, var(--gold) 28%, transparent);
 
   --font-display: 'Syne', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', 'Courier New', monospace;
@@ -191,13 +217,13 @@ html, body {
 
 .hero-link-primary {
   background: var(--accent-bright);
-  color: #000;
+  color: var(--on-accent);
 }
 
 .hero-link-primary:hover {
-  background: #ffe54a;
+  background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: 0 8px 28px rgba(255, 215, 0, 0.28);
+  box-shadow: 0 8px 28px var(--accent-shadow);
 }
 
 .hero-link-secondary {
