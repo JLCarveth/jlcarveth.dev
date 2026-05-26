@@ -8,6 +8,7 @@ override_dh_auto_build:
 	deno run -A dev.ts build
 	# Compile TypeScript to standalone binary
 	deno compile -Ar \
+		--include deno.json \
 		--include routes/ \
 		--include islands/ \
 		--include components/ \
