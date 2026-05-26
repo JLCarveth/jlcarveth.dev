@@ -1,0 +1,19 @@
+Source: jlcarveth-dev
+Section: web
+Priority: optional
+Maintainer: John Carveth <jlcarveth@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/JLCarveth/jlcarveth.dev
+
+Package: jlcarveth-dev
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, systemd, nginx, ucf
+Recommends: ca-certificates
+Description: Personal portfolio and blog website
+ jlcarveth.dev is a Fresh (Deno) web application serving as John Carveth's
+ personal portfolio, showcasing projects and problem-solving skills.
+ .
+ The application is compiled to a standalone binary using deno compile,
+ requiring no Deno runtime on the production system. It is served behind
+ an nginx reverse proxy.

@@ -1,0 +1,17 @@
+Package: jlcarveth-dev
+Version: 0.7.0
+Architecture: amd64
+Maintainer: John Carveth <jlcarveth@gmail.com>
+Installed-Size: 97168
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), systemd, nginx, ucf
+Recommends: ca-certificates
+Section: web
+Priority: optional
+Homepage: https://github.com/JLCarveth/jlcarveth.dev
+Description: Personal portfolio and blog website
+ jlcarveth.dev is a Fresh (Deno) web application serving as John Carveth's
+ personal portfolio, showcasing projects and problem-solving skills.
+ .
+ The application is compiled to a standalone binary using deno compile,
+ requiring no Deno runtime on the production system. It is served behind
+ an nginx reverse proxy.

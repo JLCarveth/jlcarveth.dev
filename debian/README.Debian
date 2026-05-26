@@ -1,0 +1,49 @@
+jlcarveth-dev for Debian
+========================
+
+INSTALLATION PATHS
+------------------
+Binary:   /usr/bin/jlcarveth-dev
+Data:     /usr/share/jlcarveth-dev/
+Config:   /etc/jlcarveth-dev/environment
+Systemd:  /etc/systemd/system/jlcarveth-dev.service
+Nginx:    /etc/nginx/sites-available/jlcarveth-dev
+
+SERVICE USER
+------------
+The service runs as the 'jlcarveth-dev' system user (no home directory, no
+login shell). This user is created during installation and removed on purge.
+
+CONFIGURATION
+-------------
+Edit /etc/jlcarveth-dev/environment to set runtime options:
+
+  PORT=8010    (optional, default: 8010)
+
+After editing, restart the service:
+  systemctl restart jlcarveth-dev
+
+NGINX
+-----
+The nginx site block is managed by ucf. Customisations you make to
+/etc/nginx/sites-available/jlcarveth-dev are preserved across upgrades via
+three-way merge. The site listens on port 80 and proxies to localhost:8010.
+
+For HTTPS, add your SSL configuration to the nginx site block.
+
+REMOVE VS PURGE
+---------------
+  dpkg --remove jlcarveth-dev   — Removes binaries; keeps /etc/jlcarveth-dev
+  dpkg --purge  jlcarveth-dev   — Removes everything including config and user
+
+BUILD REQUIREMENTS
+------------------
+Building requires Deno (not needed at runtime). The resulting binary is fully
+standalone — no Deno runtime required on the production system.
+
+  deno run -A dev.ts build
+  deno compile -Ar --include routes/ --include islands/ --include components/ \
+    --include static/ --include lib/ --include fresh.gen.ts \
+    --include import_map.json --output jlcarveth-dev main.ts
+
+ -- John Carveth <jlcarveth@gmail.com>  Tue, 26 May 2026 00:00:00 +0000

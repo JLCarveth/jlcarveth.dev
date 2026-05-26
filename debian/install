@@ -1,0 +1,2 @@
+debian/jlcarveth-dev.nginx /usr/share/jlcarveth-dev
+debian/jlcarveth-dev.environment.template /usr/share/jlcarveth-dev

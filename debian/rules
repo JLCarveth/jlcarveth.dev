@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	# Build Fresh islands and static assets
+	deno run -A dev.ts build
+	# Compile TypeScript to standalone binary
+	deno compile -Ar \
+		--include routes/ \
+		--include islands/ \
+		--include components/ \
+		--include static/ \
+		--include lib/ \
+		--include fresh.gen.ts \
+		--include import_map.json \
+		--output jlcarveth-dev \
+		main.ts
+
+override_dh_auto_install:
+	mkdir -p debian/jlcarveth-dev/usr/bin
+	mkdir -p debian/jlcarveth-dev/usr/share/jlcarveth-dev
+	mkdir -p debian/jlcarveth-dev/etc/jlcarveth-dev
+	install -m 755 jlcarveth-dev debian/jlcarveth-dev/usr/bin/jlcarveth-dev
+	install -m 644 debian/jlcarveth-dev.environment.template debian/jlcarveth-dev/etc/jlcarveth-dev/environment.template
+
+override_dh_strip:
+	# Skip binary stripping - would break Deno binary
+
+override_dh_installsystemd:
+	dh_installsystemd --restart-after-upgrade
+
+override_dh_auto_test:
+	# Skip test suite
+
+override_dh_auto_clean:
+	dh_auto_clean
+	# Don't delete the compiled binary to avoid recompilation

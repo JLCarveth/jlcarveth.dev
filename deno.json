@@ -1,6 +1,9 @@
 {
+  "version": "0.7.0",
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts"
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "build-deb": "dpkg-buildpackage -b -us -uc"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {

@@ -1,0 +1,63 @@
+#!/bin/bash
+set -e
+
+PKG=jlcarveth-dev
+SVCUSER=jlcarveth-dev
+CFGDIR=/etc/$PKG
+SHAREDIR=/usr/share/$PKG
+NGINXAVAIL=/etc/nginx/sites-available/$PKG
+NGINXENABLED=/etc/nginx/sites-enabled/$PKG
+
+case "$1" in
+    configure)
+        # Create system user if it doesn't exist
+        if ! id "$SVCUSER" &>/dev/null; then
+            adduser --system --group --no-create-home --shell /usr/sbin/nologin "$SVCUSER"
+        fi
+
+        # Set ownership on config directory
+        chown root:"$SVCUSER" "$CFGDIR"
+        chmod 750 "$CFGDIR"
+
+        # Create environment file from template if it doesn't exist
+        if [ ! -f "$CFGDIR/environment" ]; then
+            install -m 640 -o root -g "$SVCUSER" "$SHAREDIR/jlcarveth-dev.environment.template" "$CFGDIR/environment"
+        fi
+
+        # Install nginx configuration using ucf for upgrade-safe merging
+        ucf --three-way "$SHAREDIR/jlcarveth-dev.nginx" "$NGINXAVAIL"
+        ucfr "$PKG" "$NGINXAVAIL"
+        chmod 644 "$NGINXAVAIL"
+
+        # Enable nginx site if not already enabled
+        if [ ! -e "$NGINXENABLED" ]; then
+            ln -s "$NGINXAVAIL" "$NGINXENABLED"
+        fi
+
+        # Test and reload nginx
+        if nginx -t 2>/dev/null; then
+            systemctl reload nginx || true
+        else
+            echo "WARNING: nginx configuration test failed. Please check $NGINXAVAIL"
+        fi
+
+        echo ""
+        echo "======================================================"
+        echo " $PKG installed successfully"
+        echo "======================================================"
+        echo ""
+        echo "Configuration: $CFGDIR/environment"
+        echo ""
+        echo "To start the service:"
+        echo "  systemctl enable --now $PKG"
+        echo ""
+        echo "To check status:"
+        echo "  systemctl status $PKG"
+        echo "======================================================"
+        echo ""
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

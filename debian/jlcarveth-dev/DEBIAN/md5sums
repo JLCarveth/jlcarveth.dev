@@ -1,0 +1,8 @@
+ebb77a8df0bc2c25133afbd15472a2fc  usr/bin/jlcarveth-dev
+424c2444b9f7c8877e98d8cf8daac7ca  usr/lib/systemd/system/jlcarveth-dev.service
+437bb6a85a912279e4954d3c26345659  usr/share/doc/jlcarveth-dev/README.Debian
+51761de4db7ffea1d556fe6f5706f33d  usr/share/doc/jlcarveth-dev/changelog.gz
+268cc0f93e9494eb740d0be360e56851  usr/share/doc/jlcarveth-dev/copyright
+6f2284498cb6ae9c1d87ad32fa0b2b68  usr/share/jlcarveth-dev/jlcarveth-dev.environment.template
+598a795ff9ae0410c2a7a859094cf0c4  usr/share/jlcarveth-dev/jlcarveth-dev.nginx
+d0da09eec823fbc097655239417cfd42  usr/share/lintian/overrides/jlcarveth-dev

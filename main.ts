@@ -7,4 +7,4 @@
 import { start } from "$fresh/server.ts";
 import manifest from "./fresh.gen.ts";
 
-await start(manifest, { port: Deno.env.get("PORT") || 8010 });
+await start(manifest, { port: Number(Deno.env.get("PORT")) || 8010 });
