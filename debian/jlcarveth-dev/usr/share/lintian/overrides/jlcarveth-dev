@@ -1,2 +1,0 @@
-# Suppress warnings for embedded V8/TypeScript/Preact in the standalone Deno binary
-jlcarveth-dev: embedded-library

@@ -1,2 +1,17 @@
 .vim/
 .env*
+
+# Debian build artifacts
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper
+debian/*.debhelper.log
+debian/jlcarveth-dev/
+
+# Compiled binaries
+*.deb
+*.ddeb
+*.changes
+*.buildinfo
