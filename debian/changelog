@@ -1,3 +1,9 @@
+jlcarveth-dev (0.7.1) unstable; urgency=medium
+
+  * Include deno.json in compiled binary
+
+ -- John L. Carveth <johnc@eastelectricalsupply.com>  Tue, 26 May 2026 09:24:16 -0400
+
 jlcarveth-dev (0.7.0) unstable; urgency=medium
 
   * Version bump for redesign
